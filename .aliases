@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
+alias config='/usr/bin/git --git-dir=/Users/ben/.cfg/ --work-tree=/Users/ben'
 alias ls="ls -Gal"
