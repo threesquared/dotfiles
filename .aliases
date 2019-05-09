@@ -2,3 +2,9 @@
 
 alias config='/usr/bin/git --git-dir=/Users/ben/.cfg/ --work-tree=/Users/ben'
 alias ls="ls -Gal"
+alias vault "aws-vault exec peakon -- "
+
+function avt {
+  profile=$1; shift
+  aws-vault exec $profile -- /usr/local/bin/terraform "$@";
+}
