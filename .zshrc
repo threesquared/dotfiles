@@ -99,3 +99,13 @@ source ".aliases";
 
 # added by travis gem
 [ -f /Users/ben/.travis/travis.sh ] && source /Users/ben/.travis/travis.sh
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/ben/Projects/pub/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/ben/Projects/pub/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/ben/Projects/pub/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/ben/Projects/pub/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/ben/Projects/pub/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/ben/Projects/pub/node_modules/tabtab/.completions/slss.zsh
