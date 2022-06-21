@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+function tf {
+  peakon production /usr/local/bin/terraform "$@";
+}
+
+function peakon {
+  PROFILE=$1; shift
+
+  if [ "$PROFILE" = "login" ]; then
+    saml2aws login
+    return
+  elif [ $# -lt 1 ]; then
+    echo "Usage: peakon <profile_name> <command with args>"
+    return
+  fi
+
+  aws --profile "$PROFILE" sts get-caller-identity > /dev/null 2>&1
+  EXIT_CODE=$?
+
+  if [ $EXIT_CODE -ne 0 ]; then
+    saml2aws login
+  fi
+
+  if [[ "$1" =~ "^k9s|helm|kubectl$" ]]; then
+    >&2 /usr/local/bin/kubectl config use-context $PROFILE
+  fi
+
+  $(aws-export-assume-profile $PROFILE)
+  >&2 echo "Switched to ${PROFILE}"
+
+  "$@"
+
+  $(aws-export-assume-profile -u)
+}
