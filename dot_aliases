@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 function tf {
-  peakon production /usr/local/bin/terraform "$@";
+  peakon production terraform "$@";
 }
 
 function peakon {
@@ -23,7 +23,7 @@ function peakon {
   fi
 
   if [[ "$1" =~ "^k9s|helm|kubectl$" ]]; then
-    >&2 /usr/local/bin/kubectl config use-context $PROFILE
+    >&2 kubectl config use-context $PROFILE
   fi
 
   $(aws-export-assume-profile $PROFILE)
