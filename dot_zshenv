@@ -1,4 +1,4 @@
 export PATH="/opt/homebrew/opt/python3/libexec/bin:$PATH"
+export PATH=$PATH:$HOME/bin
 export EDITOR="code --wait"
 export SSH_AUTH_SOCK=/Users/ben.speakman/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
-export PATH=$PATH:$HOME/bin
