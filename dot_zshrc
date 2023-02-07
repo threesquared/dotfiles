@@ -12,3 +12,6 @@ source "$HOME/.aliases";
 source "$HOME/.secenv";
 
 unsetopt PROMPT_SP
+
+source <(pkn completion zsh); compdef _pkn pkn
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
