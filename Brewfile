@@ -1,3 +1,4 @@
+tap "1password/tap"
 tap "cloudflare/cloudflare"
 tap "datreeio/datree"
 tap "derailed/k9s"
@@ -9,6 +10,8 @@ tap "homebrew/bundle"
 tap "homebrew/services"
 tap "kreuzwerker/taps"
 tap "lindell/multi-gitter"
+tap "peakon/tap", "git+ssh://git@github.com/peakon/homebrew-tap", trusted: true
+tap "scylla/packages", "git@ghe.megaleo.com:scylla/homebrew-packages.git"
 tap "tilt-dev/tap"
 tap "warrensbox/tap"
 # TIFF library and utilities
@@ -37,6 +40,8 @@ brew "glib"
 brew "node"
 # Define k8s native apps and abstractions using object-oriented programming
 brew "cdk8s"
+# Cloud Development Kit for Terraform
+brew "cdktf"
 # Schema and validator for YAML
 brew "yamale"
 # Testing and linting Helm charts
@@ -145,6 +150,8 @@ brew "poetry"
 brew "poppler"
 # Object-relational database system
 brew "postgresql@15", link: true
+# Cloud native development platform
+brew "pulumi"
 # Python version management
 brew "pyenv"
 # Interpreted, interactive, object-oriented programming language
@@ -157,6 +164,8 @@ brew "python@3.9"
 brew "ruby-build"
 # Ruby version manager
 brew "rbenv"
+# Login and retrieve AWS temporary credentials using a SAML IDP
+brew "saml2aws"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
 # Work with remote images registries
@@ -175,7 +184,12 @@ brew "ykman"
 brew "zlib"
 # UNIX shell (command interpreter)
 brew "zsh"
+# The Peakon CLI
+brew "peakon/tap/peakon-cli"
+# Command-line interface for 1Password
+cask "1password-cli"
 cask "goreleaser"
+cask "hashicorp-boundary-desktop"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
 # Replacement for Docker Desktop
@@ -183,6 +197,31 @@ cask "orbstack"
 # Store SSH keys in the Secure Enclave
 cask "secretive"
 cask "tfswitch"
+vscode "anthropic.claude-code"
+vscode "anysphere.remote-containers"
+vscode "anysphere.remote-ssh"
+vscode "bluebrown.yamlfmt"
+vscode "davidanson.vscode-markdownlint"
+vscode "dbaeumer.vscode-eslint"
+vscode "docker.docker"
+vscode "editorconfig.editorconfig"
+vscode "esbenp.prettier-vscode"
+vscode "exiasr.hadolint"
+vscode "github.vscode-github-actions"
+vscode "golang.go"
+vscode "hashicorp.terraform"
+vscode "ms-azuretools.vscode-containers"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-kubernetes-tools.vscode-kubernetes-tools"
+vscode "ms-python.python"
+vscode "ms-vscode.makefile-tools"
+vscode "openai.chatgpt"
+vscode "openai.codex-audio"
+vscode "orta.vscode-jest"
+vscode "redhat.vscode-yaml"
+vscode "timonwong.shellcheck"
+vscode "wakatime.vscode-wakatime"
+vscode "wayou.vscode-todo-highlight"
 go "github.com/cosmtrek/air"
 go "github.com/reproducible-containers/diffoci/cmd/diffoci"
 go "github.com/go-delve/delve/cmd/dlv"
@@ -199,5 +238,6 @@ go "honnef.co/go/tools/cmd/staticcheck"
 go "golang.org/x/tools/cmd/stringer"
 go "github.com/swaggo/swag/cmd/swag"
 go "github.com/google/yamlfmt/cmd/yamlfmt"
+npm "autogousto"
 npm "corepack"
 npm "pnpm"

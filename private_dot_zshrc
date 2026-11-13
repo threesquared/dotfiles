@@ -8,16 +8,19 @@ plugins=(git kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
-[[ -r "$HOME/.secenv" ]] && source "$HOME/.secenv"
+source "$HOME/.aliases";
+source "$HOME/.secenv";
 
 unsetopt PROMPT_SP
 
 # Envs
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(fnm env --use-on-cd)"
+eval "$(saml2aws --completion-script-zsh)"
 eval "$(rbenv init - zsh)"
 
 # Completions
+source <(pkn completion zsh); compdef _pkn pkn
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
 # Paths
