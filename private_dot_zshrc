@@ -8,7 +8,6 @@ plugins=(git kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
-source "$HOME/.aliases";
 source "$HOME/.secenv";
 
 unsetopt PROMPT_SP
@@ -20,13 +19,11 @@ eval "$(saml2aws --completion-script-zsh)"
 eval "$(rbenv init - zsh)"
 
 # Completions
-source <(pkn completion zsh); compdef _pkn pkn
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
 # Paths
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:$HOME/.local/bin"
-
 
 # pnpm
 export PNPM_HOME="$HOME/Library/pnpm"

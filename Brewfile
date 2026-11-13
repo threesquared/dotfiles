@@ -1,4 +1,3 @@
-tap "1password/tap"
 tap "cloudflare/cloudflare"
 tap "datreeio/datree"
 tap "derailed/k9s"
@@ -10,8 +9,6 @@ tap "homebrew/bundle"
 tap "homebrew/services"
 tap "kreuzwerker/taps"
 tap "lindell/multi-gitter"
-tap "peakon/tap", "git+ssh://git@github.com/peakon/homebrew-tap", trusted: true
-tap "scylla/packages", "git@ghe.megaleo.com:scylla/homebrew-packages.git"
 tap "tilt-dev/tap"
 tap "warrensbox/tap"
 # TIFF library and utilities
@@ -184,16 +181,10 @@ brew "ykman"
 brew "zlib"
 # UNIX shell (command interpreter)
 brew "zsh"
-# The Peakon CLI
-brew "peakon/tap/peakon-cli"
-# Command-line interface for 1Password
-cask "1password-cli"
 cask "goreleaser"
 cask "hashicorp-boundary-desktop"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
-# Replacement for Docker Desktop
-cask "orbstack"
 # Store SSH keys in the Secure Enclave
 cask "secretive"
 cask "tfswitch"
@@ -238,6 +229,5 @@ go "honnef.co/go/tools/cmd/staticcheck"
 go "golang.org/x/tools/cmd/stringer"
 go "github.com/swaggo/swag/cmd/swag"
 go "github.com/google/yamlfmt/cmd/yamlfmt"
-npm "autogousto"
 npm "corepack"
 npm "pnpm"

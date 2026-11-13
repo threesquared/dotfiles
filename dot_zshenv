@@ -4,10 +4,6 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH=$PATH:$(/opt/homebrew/bin/go env GOPATH)/bin
 export EDITOR="code --wait"
 export SSH_AUTH_SOCK=$HOME/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
-export AWS_DEFAULT_PROFILE=okta2aws
 . "$HOME/.cargo/env"
 export GPG_TTY=$(tty)
-export PKN_USE_SSO_CLI=true
 export KUBE_EDITOR='code --wait'
-export GONOSUMDB="github.com/peakon/*"
-export BOUNDARY_ADDR='https://dccust.pam.gowday.com'
